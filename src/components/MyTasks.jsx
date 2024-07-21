@@ -14,7 +14,7 @@ function MyTasks() {
   }, []);
 
   function getData() {
-    fetch("https://taskmate-applicaton.onrender.com").then((result) => {
+    fetch("https://taskmate-applicaton.onrender.com/data").then((result) => {
       result.json().then((res) => {
         setData(res);
       });
