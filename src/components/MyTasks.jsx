@@ -14,7 +14,7 @@ function MyTasks() {
   }, []);
 
   function getData() {
-    fetch( "https://vruttik223.github.io/TaskMate-applicaton/data.json/data/").then((result) => {
+    fetch( "https://vruttik223.github.io/TaskMate-applicaton/data.json").then((result) => {
       result.json().then((res) => {
         setData(res);
       });
@@ -24,7 +24,7 @@ function MyTasks() {
   function submitTask() {
     let taskInfo = { title, description, dueDate, priority };
 
-    fetch( "https://vruttik223.github.io/TaskMate-applicaton/data.json/data/", {
+    fetch( "https://vruttik223.github.io/TaskMate-applicaton/data.json", {
       method: "POST",
       headers: {
         "Accept": "application/json",
@@ -48,7 +48,7 @@ function MyTasks() {
   }
 
   function deleteTask(id) {
-    fetch(`https://vruttik223.github.io/TaskMate-applicaton/data.json/data/${id}`, {
+    fetch(`https://vruttik223.github.io/TaskMate-applicaton/data.json/${id}`, {
       method: "DELETE"
     }).then((result) => {
       result.json().then((res) => {
@@ -72,7 +72,7 @@ function MyTasks() {
 
   function updateTask() {
     let updatedTask = { title, description, dueDate, priority, id };
-    fetch(`https://vruttik223.github.io/TaskMate-applicaton/data.json/data/${id}`, {
+    fetch(`https://vruttik223.github.io/TaskMate-applicaton/data.json/${id}`, {
       method: "PUT",
       headers: {
         "Accept": "application/json",
