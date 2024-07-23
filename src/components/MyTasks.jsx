@@ -14,7 +14,7 @@ function MyTasks() {
   }, []);
 
   function getData() {
-    fetch("https://taskmate-applicaton.onrender.com/data").then((result) => {
+    fetch("http://localhost:3000/data/").then((result) => {
       result.json().then((res) => {
         setData(res);
       });
@@ -24,7 +24,7 @@ function MyTasks() {
   function submitTask() {
     let taskInfo = { title, description, dueDate, priority };
 
-    fetch("https://taskmate-applicaton.onrender.com/data", {
+    fetch("http://localhost:3000/data/", {
       method: "POST",
       headers: {
         "Accept": "application/json",
@@ -72,7 +72,7 @@ function MyTasks() {
 
   function updateTask() {
     let updatedTask = { title, description, dueDate, priority, id };
-    fetch(`https://taskmate-applicaton.onrender.com/data/${id}`, {
+    fetch(`http://localhost:3000/data/${id}`, {
       method: "PUT",
       headers: {
         "Accept": "application/json",
