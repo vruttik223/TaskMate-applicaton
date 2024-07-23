@@ -169,7 +169,7 @@ function MyTasks() {
             </div>
           </div>
           <div className="mt-4 text-sm">
-            <p className="font-semibold mb-1">TaskMate</p>
+            <p className="font-semibold mb-2">TaskMate</p>
             <ul className="list-disc pl-4">
               <li>Add New Task: Fill out the form on the right with task details.</li>
               <li>Submit Task: Click "Submit" to add the task.</li>
